@@ -1,0 +1,131 @@
+@use '../abstract/' as *;
+
+
+.hero {
+
+    display: grid;
+    grid-template-areas: 'centro';    
+    place-items: center;
+
+    position: relative;
+
+   & > * {
+    grid-area: centro;
+    
+   }
+
+   &__text {
+    text-align: center;
+    font-family: var(--ff-Space);
+    color: #fff;
+
+    
+
+    & .hero__title h3 {
+        font-size: var(--fz-Space-heading-h3) ;
+        font-weight: var(--fw-Space-heading);
+        line-height: 1;
+    }
+
+    & .hero__paragraph {
+        margin: 24px 0 34px 0;
+        margin-inline: 1rem;
+    }
+
+    & .hero__paragraph p {
+        font-family: var(--ff-Deca);
+        font-size: var(--fz-Deca-body);
+        font-weight: var(--fw-Deca-body);
+        line-height: 1.6;
+    }
+
+   }
+
+   & .shapes  {
+    
+    display: flex;
+   
+   }
+
+   & .shapes img {
+    position: absolute;
+    left: -70%;
+    bottom: 0;   
+
+   }
+
+   .shapes .circles {
+    display: flex;
+    right: -1.25rem;
+
+   }
+
+   .circles {
+    
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+
+    }
+
+
+    .circles  > * {
+    margin-left: 15px;
+    display: none;
+    height: 3.125rem;
+    width: 3.125rem;
+   
+    border-radius: 100%; 
+    }
+
+
+    @media (min-width: 500px) {
+
+        &__title h3 {
+            font-size: 3.5rem;
+            line-height:1 ;
+            font-weight: 700;
+            width: min(50%, 573px); 
+            margin-inline: auto;
+
+            margin-top: -1.875rem;
+        }
+
+        &__text .hero__paragraph {
+            width: min(60%, 573px);
+            margin-inline: auto;
+        }
+
+      
+        &__text .hero__paragraph p {
+            font-family: var(--fw-Deca-body);
+            font-size: 15px;
+           
+            
+
+        }
+
+      
+
+        & .shapes img {
+           /*  top: 75%; */
+            left: -20%;
+            bottom: 0;
+            
+
+        }
+
+        .circles  > * {
+            margin-left: 15px;
+            display: block;
+            height: 3.125rem;
+            background-color: #fff;
+            border-radius: 100%; 
+            width: 3.125rem;
+        }
+        
+
+    }
+
+
+}

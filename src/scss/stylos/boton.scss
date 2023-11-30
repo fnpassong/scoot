@@ -1,0 +1,11 @@
+@use '../abstract/' as *;
+
+.btn {
+    display: inline-block;
+    text-transform: capitalize;
+    padding-block: 0.875rem;
+    padding-inline: 2.4375rem;
+    font-size: var(--fz-Deca-body);
+    background-color: var(--clr-yellow);
+    font-weight: 700;
+}
